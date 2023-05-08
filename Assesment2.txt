@@ -1,0 +1,75 @@
+pipeline {
+    agent none
+    stages {
+        stage('bitbucket') {
+            steps {
+                script {
+                    echo "code of the application..."
+                }
+            }
+        }
+        stage('jenkins') {
+            steps {
+                script {
+                    echo "CI and CD of the application..."
+                }
+            }
+        }
+        stage('Deployment') {
+            steps {
+                script {
+                    echo " Application deployed in kubernetes"
+                }
+            }
+        }
+        stage('Testing') {
+            steps {
+                script {
+                    echo "Testing the application through several stages"
+                }
+            }
+        }
+        stage('Docker') {
+            steps {
+                script {
+                    echo "Images which are created"
+                }
+            }
+        }
+        stage('Nexus') {
+            steps {
+                script {
+                    echo "Pods and containers"
+                }
+            }
+        }
+        stage('pods') {
+            steps {
+                script {
+                    echo "openshift kubernetes"
+                }
+            }
+        }
+        stage('Datadog') {
+            steps {
+                script {
+                    echo "To monitor performance of application"
+                }
+            }
+        }
+         stage('Prod') {
+            steps {
+                script {
+                    echo "application pushed to production environment after all verification"
+                }
+            }
+        }
+        stage('UI') {
+            steps {
+                script {
+                    echo "UI of the application..."
+                }
+            }
+        }
+    }
+}
